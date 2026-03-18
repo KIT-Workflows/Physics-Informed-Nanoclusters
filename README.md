@@ -1,10 +1,9 @@
-# README for `cluster_13_reviewed.ipynb`
 
 This folder contains a Colab-oriented notebook that documents the supervised, interpretable machine-learning part of the paper:
 
 **"Interpretable, Physics-Informed Learning Reveals Sulfur Adsorption and Poisoning Mechanisms in 13-Atom Icosahedra Nanoclusters"**
 
-The notebook is best understood as a compact, self-contained analysis layer built on top of a curated DFT-derived dataset for 30 transition-metal `TM13` icosahedral nanoclusters. Its main role is to support the adsorption-energy prediction, validation, and feature-importance results discussed in the manuscript.
+The notebook is best understood as a compact, self-contained analysis layer built on a curated DFT-derived dataset of 30 transition-metal `TM13` icosahedral nanoclusters. Its main role is to support the prediction, validation, and feature-importance results for adsorption energy discussed in the manuscript.
 
 ## What this notebook does
 
@@ -27,7 +26,7 @@ The notebook:
 
 ## What this notebook does not do
 
-This notebook does **not** reproduce the full paper workflow end to end. In particular, it does not:
+This notebook does **not** reproduce the full paper workflow end-to-end. In particular, it does not:
 
 - run VASP or any other DFT calculations;
 - optimize pristine or adsorbed nanocluster geometries;
@@ -36,18 +35,18 @@ This notebook does **not** reproduce the full paper workflow end to end. In part
 - run the `SO2/TM13` follow-up calculations;
 - reproduce the unsupervised PCA and k-means analysis described in the full manuscript workflow.
 
-Those steps belong to the broader DFT pipeline described in the paper and Supporting Information. This notebook only covers the compact supervised-ML and interpretability analysis built from the curated descriptor table.
+Those steps belong to the broader DFT pipeline described in the paper and Supporting Information. This notebook only covers the compact supervised ML and interpretability analysis built from the curated descriptor table.
 
 ## Files in this folder
 
 - `cluster_13_reviewed.ipynb`: the main Colab notebook.
 - `all_no_normalization_data.xlsx`: an archival copy of the curated descriptor table.
 
-Important: the current notebook does **not** read the Excel file during execution. It embeds the table directly as a raw TSV string, which makes the notebook self-contained for Colab use.
+Important: the current notebook does **not** read the Excel file during execution. It embeds the table as a raw TSV string, making the notebook self-contained for Colab use.
 
 ## Relationship to the paper
 
-This notebook most directly supports the supervised-learning results associated with the manuscript discussion around feature importance and adsorption-energy prediction.
+This notebook most directly supports the supervised-learning results discussed in the manuscript, particularly regarding feature importance and adsorption-energy prediction.
 
 In practice, the clearest links are:
 
@@ -163,7 +162,7 @@ The first diagnostic confirms that:
 Eads_s = e_int_s + e_dis_s
 ```
 
-exactly holds for every row. The notebook then shows that including `e_int_s` and `e_dis_s` as features produces essentially perfect performance, which is correctly treated as leakage rather than a meaningful predictive result.
+Exactly holds for every row. The notebook then shows that including `e_int_s` and `e_dis_s` as features produces essentially perfect performance, which is correctly treated as leakage rather than a meaningful predictive result.
 
 ### 2. LOOCV baselines
 
@@ -206,7 +205,7 @@ This figure is generated from the LOFO cell with:
 CV_SCHEME = "group"
 ```
 
-It reports feature-importance drops across all three models and summarizes the average importance across models.
+It reports drops in feature importance across all three models and summarizes the average importance across models.
 
 ### `fig6_trends_3models_logo.jpg`
 
@@ -240,7 +239,7 @@ These results show why the notebook emphasizes methodological discipline:
 
 - leaky features can make the problem look almost perfectly solved;
 - chemically meaningful holdout is harder than ordinary LOOCV;
-- the final interpretation depends more on robustness checks than on a single headline score.
+- The final interpretation depends more on robustness checks than on a single headline score.
 
 ## Interpretation notes
 
@@ -252,7 +251,7 @@ Its main methodological messages are:
 - separate target construction from model inputs;
 - do not trust random or convenience splits alone;
 - use drop-column retraining instead of naive coefficient reading when descriptors are correlated;
-- compare linear and nonlinear interpretable models before making chemical claims.
+- Compare linear and nonlinear interpretable models before making chemical claims.
 
 ## Reproducibility notes
 
@@ -268,10 +267,5 @@ If this folder is distributed with the manuscript, the safest wording is:
 > This notebook reproduces the supervised regression, leakage control, group-aware validation, LOFO feature-importance analysis, and manuscript figure-generation steps based on the curated 30-system descriptor table. It is a support document for the paper's interpretable ML results, not a replacement for the underlying DFT workflow.
 
 ## Related manuscript files
-
-For the full scientific context, see:
-
-- `../main.pdf`
-- `../SI_main.pdf`
 
 The paper and SI contain the full physical definitions of the descriptors, the DFT protocol, and the broader workflow beyond this notebook.
