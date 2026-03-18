@@ -272,7 +272,7 @@ https://arxiv.org/abs/2601.13845
 BibTeX:
 
 ```bibtex
-@misc{monteiro2026sulfur_nanoclusters,
+@misc{monteiro2026_sulfur_nanoclusters,
   title         = {Interpretable, Physics-Informed Learning Reveals Sulfur Adsorption and Poisoning Mechanisms in 13-Atom Icosahedra Nanoclusters},
   author        = {Monteiro, Raiane Ferreira and Palheta, Jo{\~a}o Marcos T. and Grison, Tulio Gnoatto and Filho, Oct{\'a}vio Rodrigues and Parreira, Renato Luis Tame and Guedes-Sobrinho, Diego and R{\^e}go, Celso R. C. and Dias, Alexandre C. and Batista, Krys Elly de Ara{\'u}jo and Piotrowski, Maur{\'i}cio J.},
   year          = {2026},
