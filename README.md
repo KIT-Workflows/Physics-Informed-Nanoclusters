@@ -260,12 +260,26 @@ Its main methodological messages are:
 - The final LOFO figure uses joblib parallelism and limits BLAS thread counts to avoid oversubscription.
 - Small numerical differences may still appear across environments because package versions in Colab can change over time.
 
-## Related manuscript files
+## Citation
 
-For the full scientific context, see:
+If you use this notebook or distribute it together with the paper materials, please cite the associated preprint:
 
-- `../main.pdf`
-- `../SI_main.pdf`
-- arXiv preprint: https://arxiv.org/abs/2601.13845
+Monteiro, Raiane Ferreira; Palheta, João Marcos T.; Grison, Tulio Gnoatto; Filho, Octávio Rodrigues; Parreira, Renato Luis Tame; Guedes-Sobrinho, Diego; Rêgo, Celso R. C.; Dias, Alexandre C.; Batista, Krys Elly de Araújo; and Piotrowski, Maurício J.  
+*Interpretable, Physics-Informed Learning Reveals Sulfur Adsorption and Poisoning Mechanisms in 13-Atom Icosahedra Nanoclusters*. arXiv, January 20, 2026.  
+`arXiv:2601.13845`  
+https://arxiv.org/abs/2601.13845
 
-The paper and SI contain the full physical definitions of the descriptors, the DFT protocol, and the broader workflow beyond this notebook.
+BibTeX:
+
+```bibtex
+@misc{monteiro2026sulfur_nanoclusters,
+  title         = {Interpretable, Physics-Informed Learning Reveals Sulfur Adsorption and Poisoning Mechanisms in 13-Atom Icosahedra Nanoclusters},
+  author        = {Monteiro, Raiane Ferreira and Palheta, Jo{\~a}o Marcos T. and Grison, Tulio Gnoatto and Filho, Oct{\'a}vio Rodrigues and Parreira, Renato Luis Tame and Guedes-Sobrinho, Diego and R{\^e}go, Celso R. C. and Dias, Alexandre C. and Batista, Krys Elly de Ara{\'u}jo and Piotrowski, Maur{\'i}cio J.},
+  year          = {2026},
+  month         = jan,
+  eprint        = {2601.13845},
+  archivePrefix = {arXiv},
+  primaryClass  = {physics.atm-clus},
+  url           = {https://arxiv.org/abs/2601.13845}
+}
+```
