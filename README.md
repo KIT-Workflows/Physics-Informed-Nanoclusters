@@ -260,12 +260,12 @@ Its main methodological messages are:
 - The final LOFO figure uses joblib parallelism and limits BLAS thread counts to avoid oversubscription.
 - Small numerical differences may still appear across environments because package versions in Colab can change over time.
 
-## Suggested citation context inside the paper package
-
-If this folder is distributed with the manuscript, the safest wording is:
-
-> This notebook reproduces the supervised regression, leakage control, group-aware validation, LOFO feature-importance analysis, and manuscript figure-generation steps based on the curated 30-system descriptor table. It is a support document for the paper's interpretable ML results, not a replacement for the underlying DFT workflow.
-
 ## Related manuscript files
+
+For the full scientific context, see:
+
+- `../main.pdf`
+- `../SI_main.pdf`
+- arXiv preprint: https://arxiv.org/abs/2601.13845
 
 The paper and SI contain the full physical definitions of the descriptors, the DFT protocol, and the broader workflow beyond this notebook.
